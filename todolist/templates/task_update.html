@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>task_update</title>
+</head>
+<body>
+  {% block content %}
+  <h1>Edit task</h1>
+  <form method="POST" action="">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <p> <li>Enter date and time(24hrs) in format: YYYY/MM/DD &lt;space&gt; TT:MM</li></p>
+    <input type="submit" value="SUBMIT">
+</form>
+{% endblock %}
+
+</body>
+</html>

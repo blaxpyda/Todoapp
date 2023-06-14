@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="main.css">
+  <title>signup-form</title>
+</head>
+<body>
+</head>
+<body>
+  <div class="container">
+    <div class="image-container">
+      <img src="/todolist/static/Logo.jpg" alt="Logo" />
+    </div>
+    <form id="signup-form" onsubmit="submitForm(event)">
+      <div class="form-group">
+        <input type="text" class="form-control" id="first-name" placeholder="First Name" required>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" id="last-name" placeholder="Last Name" required>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" id="username" placeholder="Username" required>
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" id="password" placeholder="Password" required>
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" id="confirm-password" placeholder="Confirm Password" required>
+      </div>
+      <div class="form-group">
+        <select class="form-control" id="gender" required>
+          <option value="">Select Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="terms" required>
+          <label class="form-check-label checkbox-label" for="terms">I agree to the Terms and Conditions</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <a class="login-link" href="#">Already have an account? Login</a>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary submit-btn">Submit</button>
+      </div>
+    </form>
+  </div>
+  <script>
+    function submitForm(event) {
+      event.preventDefault(); // Prevent form submission
+
+      // Perform form validation
+      var firstName = document.getElementById('first-name').value;
+      var lastName = document.getElementById('last-name').value;
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+      var confirmPassword = document.getElementById('confirm-password').value;
+      var gender = document.getElementById('gender').value;
+      var terms = document.getElementById('terms').checked;
+      // Example validation: Check if all fields are filled and passwords match
+      if (firstName && lastName && username && password && confirmPassword && gender && terms) {
+        if (password !== confirmPassword) {
+          alert("Passwords do not match.");
+        } else {
+          // Form is valid, perform form submission or other actions
+          alert("Form submitted successfully!");
+          // Add your code here to handle form submission or redirect to another page
+        }
+      } else {
+        alert("Please fill in all fields.");
+      }
+    }
+  </script>
+</body>
+</html>

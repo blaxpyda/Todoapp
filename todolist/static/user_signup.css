@@ -1,0 +1,31 @@
+<style>
+    *{
+      background-color: cornflowerblue;
+    }
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding-top: 50px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .checkbox-label {
+      font-weight: normal;
+    }
+    .login-link {
+      display: block;
+      margin-top: 10px;
+    }
+    .submit-btn {
+      margin: 20px 20px 20px 20px;
+    }
+    .image-container {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .image-container img {
+      width: 100px;
+      
+    }
+  </style>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calendar</title>
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{%static 'cal.css'%}">
+</head>
+<body>
+    <div id="calendar">
+        <div class="header">
+          <h1>Select date </h1>
+          <button id="prevButton">&lt;</button>
+          <h2 id="monthYear"></h2>
+          <button id="nextButton">&gt;</button>
+        </div>
+        
+        <table>
+          <tbody id="calendarBody"></tbody>
+          <thead>
+            <tr>
+              <th>Sun</th>
+              <th>Mon</th>
+              <th>Tue</th>
+              <th>Wed</th>
+              <th>Thu</th>
+              <th>Fri</th>
+              <th>Sat</th>
+            </tr>
+          </thead>
+          
+        </table>
+      </div>
+
+    <script type="text/javascript" src="{% static 'cal.js'%}"></script>
+  
+      
+</body>
+</html>
+
+
+
+<div id="calendar">
+  <div class="header">
+    <button id="prevButton">&lt;</button>
+    <h2 id="monthYear"></h2>
+    <button id="nextButton">&gt;</button>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Sun</th>
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
+        <th>Sat</th>
+      </tr>
+    </thead>
+    <tbody id="calendarBody"></tbody>
+  </table>
+</div>

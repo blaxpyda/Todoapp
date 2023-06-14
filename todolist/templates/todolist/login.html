@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+    
+</head>
+
+<body>
+     <div class="box">
+        <div class="container">
+            <div class="top-header">
+                <span>Have an account already?</span>
+                <header><b>LOGIN</b></header>
+            </div>
+            <form action="" method="post" autocomplete="on">
+                {% csrf_token %}
+                {{form.as_p}}
+            
+            <div class="bottom">
+                <div class="left">
+                <input type="checkbox" id="check">
+                <label for="check">Remember me</label>
+                </div>
+                <button type="submit" onclick="submitForm()">Login</button>
+            </form>
+
+            <p style="color: white;">Dont have an account? <a href="{% url 'user_signup' %}" style="color: white;">SignUp</a></p>
+            
+            </div>
+        </div>
+     </div>
+</body>
+</html>
+
+
+
+
+
+

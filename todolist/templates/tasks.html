@@ -1,0 +1,9 @@
+<a href="{% url 'tasks_lists' %}">Go back</a>
+
+<h1> {{ task }}</h1>
+<ul>
+    <li><Title:> {{ task.title }}</li>
+    <li>Description: {{ task.description }}</li>
+    <li>Complete: {{ task.complete }}</li>
+    <li>Due date: {{ task.due_date }}</li>
+  </ul>

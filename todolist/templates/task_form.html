@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task_form</title>
+</head>
+<body>
+    <h3>Task Form</h3>
+    <hr>
+    <a href="{% url 'tasks_lists' %}">Go back</a> 
+    <hr>
+    <form method="POST" action="{% url 'Taskcreate'  %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <p> <li>Enter date and time(24hrs) in format: YYYY/MM/DD &lt;space&gt; TT:MM</li></p>
+        <input type="submit" value="SUBMIT">
+    </form>
+    
+</body>
+</html>
